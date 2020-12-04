@@ -11,10 +11,9 @@ None
 
 Role Variables
 --------------
-
-http_proxy
-https_proxy
-no_proxy
+- http_proxy
+- https_proxy
+- no_proxy
 
 Dependencies
 ------------
@@ -32,14 +31,9 @@ Including an example of how to use your role (for instance, with variables passe
       - https_proxy: "http://example.com:80"
       - no_proxy: "127.0.0.1, localhost"
       roles:
-         - raskosk.sysconfig
+      - raskosk.sysconfig
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
