@@ -1,0 +1,15 @@
+---
+- name: "Load Env-Vars"
+  include_vars:
+    file: ../defaults/main.yml
+- name: "Configure /etc/environments"
+  template:
+    src: ../templates/environment
+    dest: /etc/environment
+    owner:
+    group: 
+    mode: u=rw,g=r,o=r
+  become: true
+  when: http_proxy is defined
+- name: "Reset SSSH Connection"
+  meta: reset_connection
